@@ -20,12 +20,15 @@ module.exports = async ({ req, res }) => {
             "notif_" + Date.now(),
             body.title,
             body.body,
+            [],
             [body.userId], 
+            [],
             notificationData // Use the validated object here
         );
 
         return res.json({ success: true });
     } catch (error) {
+        console.error("Messaging Error:", error);
         return res.json({ success: false, error: error.message });
     }
 };

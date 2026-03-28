@@ -1,0 +1,6 @@
+{
+  "name": "bright-notification",
+  "dependencies": {
+    "node-appwrite": "latest"
+  }
+}
